@@ -1,0 +1,23 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// Model definition for the "User" table in the database.
+model User {
+  // `id` is the primary key (`@id`) which auto-increments with each new record
+  id Int @id @default(autoincrement()) 
+  name String // `name` is a required field that stores the user's name as a string.
+  email String // `email` is a required field that stores the user's email address as a string.
+}
