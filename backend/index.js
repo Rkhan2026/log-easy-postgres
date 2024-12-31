@@ -16,8 +16,6 @@ app.use(express.json());
 // CORS (Cross-Origin Resource Sharing) configuration
 // enable cors
 app.use(cors());
-app.options('*', cors());
-
 /*app.use((req, res, next) => {
     // IMPORTANT: In production, NEVER use '*' for Access-Control-Allow-Origin.
     // Replace '*' with the specific origin(s) of your frontend application(s).
