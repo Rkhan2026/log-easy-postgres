@@ -19,4 +19,4 @@ app.get('/test', async (req, res) => {
 
 // Start the server
 const PORT = process.env.PORT || 4000; // Use the environment port or 4000 as a default
-app.listen(PORT, () => console.log(`Listening To Port ${port}`));
+app.listen(PORT, () => console.log(`Listening To Port ${PORT}`));
