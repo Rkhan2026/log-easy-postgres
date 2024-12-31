@@ -2,6 +2,10 @@
   "engines": {
     "node": "22.x"
   },
+  
+  "scripts": {
+    "postinstall": "prisma generate"
+  },
 
   "dependencies": {
     "@prisma/client": "^6.1.0",
