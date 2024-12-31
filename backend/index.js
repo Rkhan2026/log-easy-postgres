@@ -16,18 +16,11 @@ app.use(express.json());
 // CORS (Cross-Origin Resource Sharing) configuration
 // enable cors
 app.use(cors());
-/*app.use((req, res, next) => {
-    // IMPORTANT: In production, NEVER use '*' for Access-Control-Allow-Origin.
-    // Replace '*' with the specific origin(s) of your frontend application(s).
-    res.setHeader('Access-Control-Allow-Origin', '*'); // Allows requests from any origin (for development)
-    res.setHeader("Access-Control-Allow-Credentials", "true");
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS'); // Allowed HTTP methods
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Allowed headers
-    next(); // Pass control to the next middleware or route handler
-});*/
+
+// Start the server
+const PORT = process.env.PORT || 4000; // Use the environment port or 4000 as a default
 
 // API Endpoints
-
 // Test endpoint to check if the API is working
 app.get('/test', async (req, res) => {
     try {
@@ -48,6 +41,4 @@ app.post('/users', async (req, res) => {
     }
 });
 
-// Start the server
-const PORT = process.env.PORT || 4000; // Use the environment port or 4000 as a default
 app.listen(PORT, () => console.log(`Server Running On Port ${PORT}`));
