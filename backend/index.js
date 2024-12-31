@@ -9,7 +9,7 @@ const prisma = new PrismaClient();// Initialize Prisma Client to interact with t
 app.use(express.json());
 
 // API Endpoints ---> Test endpoint to check if the API is working
-app.get('/', async (req, res) => {
+app.get('/test', async (req, res) => {
     try {
         res.status(200).json({ message: 'API Is Working' });
     } catch (error) {
