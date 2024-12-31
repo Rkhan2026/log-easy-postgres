@@ -13,10 +13,6 @@ const app = express();
 // Middleware to parse incoming JSON requests
 app.use(express.json());
 
-// CORS (Cross-Origin Resource Sharing) configuration
-// enable cors
-app.use(cors());
-
 // Start the server
 const PORT = process.env.PORT || 4000; // Use the environment port or 4000 as a default
 
