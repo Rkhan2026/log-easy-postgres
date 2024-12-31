@@ -1,20 +1,15 @@
 const express = require('express');
+const app = express();// Create an Express app instance
+
 const { PrismaClient } = require('@prisma/client');
-
-// Initialize Prisma Client to interact with the database
-const prisma = new PrismaClient();
-
-// Create an Express app instance
-const app = express();
+const prisma = new PrismaClient();// Initialize Prisma Client to interact with the database
 
 // Middleware Setup
-
 // Middleware to parse incoming JSON requests
 app.use(express.json());
 
-// API Endpoints
-// Test endpoint to check if the API is working
-app.get('/test', async (req, res) => {
+// API Endpoints ---> Test endpoint to check if the API is working
+app.get('/', async (req, res) => {
     try {
         res.status(200).json({ message: 'API Is Working' });
     } catch (error) {
@@ -24,4 +19,4 @@ app.get('/test', async (req, res) => {
 
 // Start the server
 const PORT = process.env.PORT || 4000; // Use the environment port or 4000 as a default
-app.listen(PORT, () => console.log(`Listening to port ${port}`));
+app.listen(PORT, () => console.log(`Listening To Port ${port}`));
