@@ -1,4 +1,9 @@
 {
+  "engines": {
+    "node": "14.20.0",
+    "npm": "7.24.2"
+  },
+
   "dependencies": {
     "@prisma/client": "^6.1.0",
     "cors": "^2.8.5",
